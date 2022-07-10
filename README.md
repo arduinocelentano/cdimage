@@ -1,5 +1,5 @@
 # cdimage
-A tool for burning visible pictures on a compact disc surfase
+A tool for burning visible pictures on a compact disc surface
 
 ![alt text](https://github.com/arduinocelentano/cdimage/blob/main/demo.png)
 
