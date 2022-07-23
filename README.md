@@ -1,5 +1,5 @@
-# cdimage
-A tool for burning visible pictures on a compact disc surface
+# CDImage
+## A tool for burning visible pictures on a compact disc surface
 
 ![alt text](https://github.com/arduinocelentano/cdimage/blob/main/demo.png)
 
@@ -10,6 +10,11 @@ I played with color shades and different compact discs with moderate success and
 
 ## Building
 You'll need [Qt 6](https://www.qt.io/product/qt6) library to build it. Just run `qmake` and then `make`. Alternatively you could build the project with [Qt Creator](https://www.qt.io/product/development-tools) if you installed it.
+
+## Windows Users
+Since many Windows users experienced problems with building it or did not want to install Qt and all the stuff, I've made a [Windows binary build](https://github.com/arduinocelentano/cdimage/releases).
+However I have not tested it thoroughly yet because I don't have a working CD recorder at hand right now.
+I think I'll try to burn some discs with Windows tools later and note down the steps for Windows users.
 
 ## Before you start
 If your compact disc is not mentioned in the track generating dialog, you'll probably fail. All the discs are slightly different geometrically. This difference does not matter for data storage but dramatically influences image calculation.
@@ -26,7 +31,7 @@ You could try to guess geometry of an unknown disc and input it manually, but yo
 
 2. Click Edit→Create track and select the model of your compact disc. 
 
-> If your disc is not in the list (which is likely), you may input geometry manually. However unknown disc calibration is neither easy nor quick procedure. If you still wish to give it a try, I recommend that you read the ["Red Book"](https://www.ecma-international.org/wp-content/uploads/ECMA-130_2nd_edition_june_1996.pdf) as well as **Considering Calibration** section in this file before you start. **If you know the geometry of some compact disc which is not in the list, let me know and I’ll include it into the distribution.**
+> If your disc is not in the list (which is likely), you may input geometry manually. However unknown disc calibration is neither easy nor quick procedure. If you still wish to give it a try, I recommend that you read the ["Red Book"](https://www.ecma-international.org/wp-content/uploads/ECMA-130_2nd_edition_june_1996.pdf) as well as  [Considering Calibration](#considering-calibration) section before you start. **If you know the geometry of some compact disc which is not in the list, let me know and I’ll include it into the distribution.**
 
 Depending on your hardware, conversion will take some time. Finally you’ll get a huge Audio CD track. *Yes, about 800Mb, which is normal for **Audio CD**.*
 
