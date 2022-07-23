@@ -15,6 +15,27 @@ You'll need [Qt 6](https://www.qt.io/product/qt6) library to build it. Just run 
 If your compact disc is not mentioned in the track generating dialog, you'll probably fail. All the discs are slightly different geometrically. This difference does not matter for data storage but dramatically influences image calculation.
 You could try to guess geometry of an unknown disc and input it manually, but you'll probably spoil a lot of discs before you get some results. Moreover, all your test discs should be perfectly identical or you should use the same CD-RW disc. Sometimes discs of the same model happen to have different parameters. Don't know why. After all, manufacturers have never cared since those discs were never supposed to be used this way.
 
+## Usage
+1. Click **Edit→Load image** and select an image file. I recommend that you use a high-contrast image. If you choose a full color image, it will be converted to grayscale. You can adjust and scale your image:
+
+* **left mouse button** — move image;
+
+* **double click** — center image;
+
+* **mouse scroll wheel** — zoom image.
+
+2. Click Edit→Create track and select the model of your compact disc. 
+
+> If your disc is not in the list (which is likely), you may input geometry manually. However unknown disc calibration is neither easy nor quick procedure. If you still wish to give it a try, I recommend that you read the ["Red Book"](https://www.ecma-international.org/wp-content/uploads/ECMA-130_2nd_edition_june_1996.pdf) as well as **Considering Calibration** section in this file before you start. **If you know the geometry of some compact disc which is not in the list, let me know and I’ll include it into the distribution.**
+
+Depending on your hardware, conversion will take some time. Finally you’ll get a huge Audio CD track. *Yes, about 800Mb, which is normal for **Audio CD**.*
+
+3. You could use any software you like to burn it. For example:
+
+`cdrecord -audio dev=<recorder_device> <generated_track>`
+
+Remember that you should create an **Audio CD**! 
+
 ## Considering Calibration 
 From the Mathematical point of view we have a sort of [multi-objective optimization](https://en.wikipedia.org/wiki/Multi-objective_optimization) problem. Bicriteria optimization, to be more precise. It means that two objective functions should be optimized simultaneously. If we define goal as getting a "neat image", we need an expert who is able to provide some feedback regarding image "quality". Which leads us to [interactive methods](https://en.wikipedia.org/wiki/Multi-objective_optimization#Solution).
 
